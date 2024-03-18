@@ -1425,4 +1425,6 @@ export function partialEncodeURI(uri: string): string {
   return uri.replaceAll('%', '%25')
 }
 
-export const isBuildCommand = (config: ResolvedConfig) => config.command === 'build'
+export function isBuildCommand(config: ResolvedConfig) {
+  return config.command === 'build'
+}

@@ -7,6 +7,7 @@ import { getDepsOptimizer } from '../optimizer'
 import { shouldExternalizeForSSR } from '../ssr/ssrExternal'
 import { watchPackageDataPlugin } from '../packages'
 import { getFsUtils } from '../fsUtils'
+import { isBuildCommand } from '../utils'
 import { jsonPlugin } from './json'
 import { resolvePlugin } from './resolve'
 import { optimizedDepsPlugin } from './optimizedDeps'
@@ -26,7 +27,6 @@ import { assetImportMetaUrlPlugin } from './assetImportMetaUrl'
 import { metadataPlugin } from './metadata'
 import { dynamicImportVarsPlugin } from './dynamicImportVars'
 import { importGlobPlugin } from './importMetaGlob'
-import { isBuildCommand } from '../utils'
 
 export async function resolvePlugins(
   config: ResolvedConfig,
